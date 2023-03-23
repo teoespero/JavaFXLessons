@@ -15,6 +15,7 @@ package teoespero.firstscreentespero.model;
 public abstract class Animal {
 
     //  data fields
+
     private int id;
     private String breed;
     private int lifeSpan;

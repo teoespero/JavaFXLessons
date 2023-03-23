@@ -26,6 +26,8 @@ import javafx.scene.control.Button;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import teoespero.firstscreentespero.model.DataProvider;
+import teoespero.firstscreentespero.model.Dog;
 
 import java.io.IOException;
 import java.net.URL;
@@ -84,6 +86,29 @@ public class createAnimal implements Initializable {
 
         displayWindow(stage, "main-menu.fxml", "Main Menu");
 
+    }
+
+    @FXML
+    void onActionSaveAnimalActionEvent(ActionEvent event) {
+
+        //  local vars to capture the field data from the form
+        int id = Integer.parseInt(txtAnimalID.getText());
+        String behavior = txtBehavior.getText();
+        String breed = txtBreed.getText();
+        int lifeSpan = Integer.parseInt(txtLifespan.getText());
+        double price = Double.parseDouble(txtPrice.getText());
+        boolean isVaccinated;
+        String special = "";
+
+        if (rdbtnVaccinatedYes.isSelected()){
+            isVaccinated = true;
+        }else{
+            isVaccinated = false;
+        }
+
+
+        Dog newDog = new Dog(id, breed, lifeSpan, behavior, price, isVaccinated, special);
+        DataProvider.addAnimal(newDog);
     }
 
     ///////////////////////////////////////////////////////////////////////////////////////

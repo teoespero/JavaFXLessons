@@ -42,19 +42,26 @@ public class MainMenu extends Application {
 
 
     public static void main(String[] args) {
-        Dog dog01 = new Dog(1, "Siberian Huskie", 15, "Crafty", 599.99, true, "Whistles");
-        Dog dog02 = new Dog(2, "Corgi", 25, "Friendly", 2000.00, true, "Homely");
-        Dog dog03 = new Dog(3, "German Shepherd", 30, "Loyal", 1500.00, true, "Smart");
-        Dog dog04 = new Dog(4, "Dalmatian", 27, "Cuddly", 1000.00, true, "Smart");
-        Dog dog05 = new Dog(5, "Dachshund", 27, "Playful", 1200.50, true, "Does tricks");
-        Dog dog06 = new Dog(6, "Mastiff", 14, "Dependable", 5000.00, true, "Intelligent");
 
+        //  define the new Dog objects and add the data to be loaded
+        Dog dog01 = new Dog(1,"Siberian Huskie", 15, "Crafty", 599.99, true, "Whistles");
         DataProvider.addAnimal(dog01);
+
+        Dog dog02 = new Dog(2, "Corgi", 25, "Friendly", 2000.00, true, "Homely");
         DataProvider.addAnimal(dog02);
+
+        Dog dog03 = new Dog(3, "German Shepherd", 30, "Loyal", 1500.00, true, "Smart");
         DataProvider.addAnimal(dog03);
+
+        Dog dog04 = new Dog(4, "Dalmatian", 27, "Cuddly", 1000.00, true, "Smart");
         DataProvider.addAnimal(dog04);
+
+        Dog dog05 = new Dog(5, "Dachshund", 27, "Playful", 1200.50, true, "Does tricks");
         DataProvider.addAnimal(dog05);
+
+        Dog dog06 = new Dog(6, "Mastiff", 14, "Dependable", 5000.00, true, "Intelligent");
         DataProvider.addAnimal(dog06);
+
         launch();
     }
 }

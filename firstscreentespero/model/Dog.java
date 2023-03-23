@@ -15,6 +15,7 @@ package teoespero.firstscreentespero.model;
 import teoespero.firstscreentespero.model.Animal;
 
 public class Dog extends Animal {
+
     private String special;
 
     //////////////////////////////////////////////////////////////////
@@ -23,8 +24,9 @@ public class Dog extends Animal {
     }
 
     public Dog(int id, String breed, int lifeSpan, String behavior, double price, boolean isVaccinated, String special) {
-        super(id, breed, lifeSpan, behavior, price, isVaccinated);
+        super(id , breed, lifeSpan, behavior, price, isVaccinated);
         this.special = special;
+        System.out.println("New dog object created...");
     }
 
     //////////////////////////////////////////////////////////////////

@@ -129,6 +129,39 @@ public class animalsGrid implements Initializable {
         System.out.println(windowName + " loaded...");
     }
 
+    //
+    public boolean search(int id){
+        boolean isFound = false;
+        for (Animal dog : DataProvider.getAllAnimals()){
+            if (dog.getId() == id){
+                isFound = true;
+                break;
+            }
+        }
+        return isFound;
+    }
+
+    //  method for the update
+    public boolean update(int id, Animal animal) {
+        boolean updateGood = false;
+
+        //  placeholder for the list index
+        int index = -1;
+
+        //  go through the list and check if the id exist
+        for (Animal dog : DataProvider.getAllAnimals()) {
+            index++;
+
+            //  if yes, then do the update
+            if (dog.getId() == id) {
+                DataProvider.getAllAnimals().set(index, animal);
+                updateGood = true;
+                break;
+            }
+        }
+        return updateGood;
+    }
+
     //  this method is called everytime this Class is loaded
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {

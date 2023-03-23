@@ -21,10 +21,12 @@ public class DataProvider {
     private static ObservableList<Animal> allAnimals = FXCollections.observableArrayList();
 
     public static void addAnimal(Animal animal){
+        System.out.println(animal.getBreed() + " data added...");
         allAnimals.add(animal);
     }
 
     public static ObservableList<Animal> getAllAnimals(){
+        System.out.println("Data loaded to observable list...");
         return allAnimals;
     }
 }
